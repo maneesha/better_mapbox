@@ -4,7 +4,8 @@ myPoints = {
         {
             "type": "Feature",
             "properties": {
-                "icon": "theatre"
+                "icon": "theatre",
+                "condition": "good",
             },
             "geometry": {
                 "type": "Point",
@@ -14,7 +15,8 @@ myPoints = {
         {
             "type": "Feature",
             "properties": {
-                "icon": "theatre"
+                "icon": "theatre",
+                "condition": "good",
             },
             "geometry": {
                 "type": "Point",
@@ -24,7 +26,8 @@ myPoints = {
         {
             "type": "Feature",
             "properties": {
-                "icon": "bar"
+                "icon": "bar",
+                "condition": "fair",
             },
             "geometry": {
                 "type": "Point",
@@ -34,7 +37,8 @@ myPoints = {
         {
             "type": "Feature",
             "properties": {
-                "icon": "bicycle"
+                "icon": "bar",
+                "condition": "fair",
             },
             "geometry": {
                 "type": "Point",
@@ -44,7 +48,8 @@ myPoints = {
         {
             "type": "Feature",
             "properties": {
-                "icon": "music"
+                "icon": "music",
+                "condition": "poor",
             },
             "geometry": {
                 "type": "Point",
@@ -54,7 +59,8 @@ myPoints = {
         {
             "type": "Feature",
             "properties": {
-                "icon": "music"
+                "icon": "music",
+                "condition": "poor",
             },
             "geometry": {
                 "type": "Point",
@@ -64,7 +70,8 @@ myPoints = {
         {
             "type": "Feature",
             "properties": {
-                "icon": "music"
+                "icon": "music",
+                "condition": "poor",
             },
             "geometry": {
                 "type": "Point",
