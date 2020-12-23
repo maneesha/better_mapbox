@@ -8,6 +8,8 @@ https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#geojson-clusterProperti
 
 https://stackoverflow.com/questions/51481471/adding-custom-icons-for-each-feature-in-feature-collection-with-mapbox-gl-js
 
+## Load external geojson file
+https://stackoverflow.com/questions/45536403/mapbox-gl-js-and-geojson-as-an-external-file 
 
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
