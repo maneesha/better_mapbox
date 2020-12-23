@@ -96,6 +96,10 @@
         // iterate forEach through same dataset defined above
         myPoints.features.forEach(function (feature) {
             var symbol = feature.properties['icon'];
+
+            // Set variable to use the condition as the text label
+            var txtlab = feature.properties['condition'];
+
             var layerID = 'poi-' + symbol;
 
             // Add a layer for this symbol type if it hasn't been added already.
@@ -110,7 +114,7 @@
                         'icon-allow-overlap': true,
                         'icon-size': 1.5,
                         // set up text and properties
-                        'text-field' : symbol,
+                        'text-field' : txtlab,
                         'text-allow-overlap' : true,
                         // spacing between letters of word
                         // 'text-letter-spacing' : 0.5,  
