@@ -109,6 +109,14 @@
                         'icon-image': symbol + '-15',
                         'icon-allow-overlap': true,
                         'icon-size': 1.5,
+                        // set up text and properties
+                        'text-field' : symbol,
+                        'text-allow-overlap' : true,
+                        // spacing between letters of word
+                        // 'text-letter-spacing' : 0.5,  
+                        // [x,y] off set for position of text relative to icon
+                        // x = 0 to be centered below icon, y=1 to be slightly below
+                        'text-offset' : [0, 1]
                     },
                     'filter': ['==', 'icon', symbol]
                 });
