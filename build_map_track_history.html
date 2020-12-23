@@ -105,8 +105,10 @@
                     'type': 'symbol',
                     'source': 'myData',  // refers to map.addSource above
                     'layout': {
+                        // set up icon and properties
                         'icon-image': symbol + '-15',
-                        'icon-allow-overlap': true
+                        'icon-allow-overlap': true,
+                        'icon-size': 1.5,
                     },
                     'filter': ['==', 'icon', symbol]
                 });
