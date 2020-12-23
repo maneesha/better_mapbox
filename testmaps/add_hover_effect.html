@@ -1,0 +1,285 @@
+<!-- https://docs.mapbox.com/mapbox-gl-js/example/filter-markers/ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Filter symbols by toggling a list</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+    .filter-group {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        border-radius: 3px;
+        width: 120px;
+        color: #fff;
+    }
+
+    .filter-group input[type='checkbox']:first-child + label {
+        border-radius: 3px 3px 0 0;
+    }
+
+    .filter-group label:last-child {
+        border-radius: 0 0 3px 3px;
+        border: none;
+    }
+
+    .filter-group input[type='checkbox'] {
+        display: none;
+    }
+
+    .filter-group input[type='checkbox'] + label {
+        background-color: #3386c0;
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .filter-group input[type='checkbox'] + label {
+        background-color: #3386c0;
+        text-transform: capitalize;
+    }
+
+    .filter-group input[type='checkbox'] + label:hover,
+    .filter-group input[type='checkbox']:checked + label {
+        background-color: #4ea0da;
+    }
+
+    .filter-group input[type='checkbox']:checked + label:before {
+        content: '✔';
+        margin-right: 5px;
+    }
+</style>
+<div id="map"></div>
+<nav id="filter-group" class="filter-group"></nav>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWFuZWVzaGE0IiwiYSI6IlJqVjNqdkUifQ.Nle8jqtpYS_1pDQLPz1E0g';
+    var places = {
+        'type': 'FeatureCollection',
+        'features': [
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'theatre', 'condition':'goodx', 
+                    'description': 'blanch the pork belly',
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.138659, 38.931567]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'theatre', 'condition':'fair',
+                    'description':'add in ginger and leeks',
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.003168, 38.894651]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'bar', 'condition':'poor',
+                    'description':'bring everything to a boil'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.090372, 38.881189]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'bicycle', 'condition':'good',
+                    'description':'skim the foam off the top',
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.052477, 38.943951]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'music', 'condition':'fair',
+                    'description': 'turn off the heat',
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.031706, 38.914581]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'music', 'condition':'poor',
+                    'description':'drain the water'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.020945, 38.878241]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'music', 'condition':'good',
+                    'description':'prepare some aromatics',
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.007481, 38.876516]
+                }
+            }
+        ]
+    };  // end json data
+
+    // create filtergroup, used in nav id above, it is the full nav block above
+    var filterGroup = document.getElementById('filter-group');
+    console.log("filtergroup", filterGroup, "filtergroup type: ", typeof(filterGroup));
+
+    // create empty map with style, center, and zoom level 
+    // put it in the map div
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: [-77.04, 38.907],
+        zoom: 11.15
+    }); //end var map 
+
+    map.on('load', function () {
+        // Add places data to the map (does not yet make them display)
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': places
+        }); //end map.addSource
+
+
+        places.features.forEach(function (feature) {
+            var symbol = feature.properties['condition'];
+            console.log("symbol", symbol, "Type: " , typeof(symbol));
+            var layerID = 'poi-' + symbol;
+            console.log("layerID", layerID, "Type: " , typeof(layerID));
+            console.log("CHECK: ", map.getLayer(layerID))
+            var txtlab = feature.properties['condition'];
+
+            // Add a layer for this symbol type if it hasn't been added already.
+            if (!map.getLayer(layerID)) {
+                map.addLayer({
+                    'id': layerID,
+                    'type': 'symbol',
+                    'source': 'places',
+                    'layout': {
+                        'icon-image': 'rocket' + '-15',
+                        'icon-size': 2.0,
+                        'icon-allow-overlap': true,
+                        'text-field': symbol,
+                        'icon-allow-overlap': true,
+                        'text-allow-overlap': true,
+                        'text-letter-spacing': 0.05,
+                        'text-offset': [0, 1]
+                    },
+
+                    //  a filter expression that singles out all features where "icon" 
+                    //is equal to symbol (a variable that is set to the selected feature's icon property):
+                    // https://docs.mapbox.com/help/glossary/filter/
+                    // this is what makes the icon the symbol. Otherwise all symbols go on top of each other.
+
+                    // 'filter': ['==', 'icon', symbol],
+                    'filter': ['==', 'condition', txtlab]
+                });
+
+                ////// TRY THE HOVER THING    
+
+                // When the user moves their mouse over the state-fill layer, we'll update the
+                // feature state for the feature under the mouse.
+                map.on('mousemove', layerID, function (e) {
+                if (e.features.length > 0) {
+                if (hoveredStateId) {
+                map.setFeatureState(
+                { source: 'states', id: hoveredStateId },
+                { hover: false }
+                );
+                }
+                hoveredStateId = e.features[0].id;
+                map.setFeatureState(
+                { source: 'states', id: hoveredStateId },
+                { hover: true }
+                );
+                }
+                });
+                
+                // When the mouse leaves the state-fill layer, update the feature state of the
+                // previously hovered feature.
+                map.on('mouseleave', layerID, function () {
+                if (hoveredStateId) {
+                map.setFeatureState(
+                { source: 'states', id: hoveredStateId },
+                { hover: false }
+                );
+                }
+                hoveredStateId = null;
+                });
+
+                /////////END TRY THE HOVER THING
+
+
+
+
+
+
+
+
+
+
+
+                // Add checkbox and label elements for the layer.
+                var input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = layerID;
+                input.checked = true;
+                filterGroup.appendChild(input);
+
+                var label = document.createElement('label');
+                label.setAttribute('for', layerID);
+                label.textContent = symbol;
+                filterGroup.appendChild(label);
+
+                // When the checkbox changes, update the visibility of the layer.
+                input.addEventListener('change', function (e) {
+                    map.setLayoutProperty(
+                        layerID,
+                        'visibility',
+                        e.target.checked ? 'visible' : 'none'
+                    );
+                });
+            } // end if !map.getlayer
+
+        }); // end places features foreach
+
+
+    }); // end map onload
+
+
+</script>
+
+</body>
+</html>
