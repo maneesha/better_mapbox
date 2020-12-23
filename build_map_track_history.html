@@ -11,6 +11,7 @@
 
 <!-- <Link to local external js file with geojson data -->
 <script src = "data/places.js"></script>
+<script src = "data/place_points.js"></script>
 
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
 <style>
@@ -85,12 +86,15 @@
 
     map.on('load', function () {
         // Add a GeoJSON source containing place coordinates and information.
-        map.addSource('places', {
+        // 1st arg in map.addSource gives it an id, to be used in 
+        // map.addLayer below.  
+        map.addSource('myData', {
             'type': 'geojson',
-            'data': places
+            'data': myPoints // variable name from the data file
         });
 
-        places.features.forEach(function (feature) {
+        // iterate forEach through same dataset defined above
+        myPoints.features.forEach(function (feature) {
             var symbol = feature.properties['icon'];
             var layerID = 'poi-' + symbol;
 
@@ -99,7 +103,7 @@
                 map.addLayer({
                     'id': layerID,
                     'type': 'symbol',
-                    'source': 'places',
+                    'source': 'myData',  // refers to map.addSource above
                     'layout': {
                         'icon-image': symbol + '-15',
                         'icon-allow-overlap': true
