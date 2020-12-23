@@ -27,27 +27,23 @@ this is what makes the icon the symbol. Otherwise all symbols go on top of each 
 <https://stackoverflow.com/questions/53672066/data-driven-styling-using-multiple-filters-in-mapbox-gl-js>
 <https://docs.mapbox.com/mapbox-gl-js/style-spec/other/#other-filter>
 
-
-
-
-
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
 &#9733; indicates things that are done.
 
 * Set up my own mapbox accessToken
 
-* Move data to its own file  &#9733; 
+* Move data to its own file  &#9733;
 
 * Add fields to geojson:
-  * condition
+  * condition   &#9733;
   * description
   * image *NOTE: image is not necessary with if statement dependent on condition*
 
 * Inside `places.features.forEach`:
   * Add new vars:
     * `var symbol = feature.properties['condition'];`
-    * `var txtlab = feature.properties['condition'];`
+    * `var txtlab = feature.properties['condition'];`  &#9733;
     * `var ic = feature.properties['icon'];`
     * `var layerID = 'poi-' + symbol;`
 
@@ -56,4 +52,3 @@ this is what makes the icon the symbol. Otherwise all symbols go on top of each 
     * `'icon-image': 'rocket' + '-15'
 
 * Make the text labels be the condition
-  
