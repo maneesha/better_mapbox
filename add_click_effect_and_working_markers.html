@@ -1,0 +1,298 @@
+<!-- https://docs.mapbox.com/mapbox-gl-js/example/filter-markers/ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Filter symbols by toggling a list</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+    .filter-group {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        border-radius: 3px;
+        width: 120px;
+        color: #fff;
+    }
+
+    .filter-group input[type='checkbox']:first-child + label {
+        border-radius: 3px 3px 0 0;
+    }
+
+    .filter-group label:last-child {
+        border-radius: 0 0 3px 3px;
+        border: none;
+    }
+
+    .filter-group input[type='checkbox'] {
+        display: none;
+    }
+
+    .filter-group input[type='checkbox'] + label {
+        background-color: #3386c0;
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .filter-group input[type='checkbox'] + label {
+        background-color: #3386c0;
+        text-transform: capitalize;
+    }
+
+    .filter-group input[type='checkbox'] + label:hover,
+    .filter-group input[type='checkbox']:checked + label {
+        background-color: #4ea0da;
+    }
+
+    .filter-group input[type='checkbox']:checked + label:before {
+        content: '✔';
+        margin-right: 5px;
+    }
+</style>
+<div id="map"></div>
+<nav id="filter-group" class="filter-group"></nav>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWFuZWVzaGE0IiwiYSI6IlJqVjNqdkUifQ.Nle8jqtpYS_1pDQLPz1E0g';
+    var places = {
+        'type': 'FeatureCollection',
+
+        'features': [
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'theatre', 'condition':'alpha', 
+                    'description': '<b>blanch</b> the pork belly - near Langley, GOOD' ,
+                    'image': ' <img src="w3.png" \>'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.138659, 38.931567]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'theatre', 'condition':'beta',
+                    'description':'<h2>add in</h2> ginger and leeks, 2nd & D, FAIR', 'image': ' <img src="w3.png" \>'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.003168, 38.894651]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'bar', 'condition':'delta',
+                    'description':'bring everything to a boil<br>south of arlington, POOR', 'image': ' <img src="w3.png" \>'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.090372, 38.879189]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'bicycle', 'condition':'alpha',
+                    'description':'skim the foam off the top<br>Hillwood estate, GOOD', 'image': ' <img src="w3.png" \>'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.053577, 38.943551]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'music', 'condition':'beta',
+                    'description': 'turn off the heat,<br>14th b/t T & S, FAIR', 'image': ' <img src="w3.png" \>'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.031706, 38.914581]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'music', 'condition':'delta',
+                    'description':'drain the water, M & Main, POOR ', 'image': ' <img src="w3.png" \>'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.020945, 38.878241]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'icon': 'music', 'condition':'alpha',
+                    'description':'prepare some aromatics, M & Half, GOOD', 'image': ' <img src="w3.png" \>'
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [-77.007481, 38.876516]
+                }
+            }
+        ]
+    };  // end json data
+
+    // create filtergroup, used in nav id above, it is the full nav block above
+    var filterGroup = document.getElementById('filter-group');
+    console.log("filtergroup", filterGroup, "filtergroup type: ", typeof(filterGroup));
+
+    // create empty map with style, center, and zoom level 
+    // put it in the map div
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: [-77.04, 38.907],
+        zoom: 11.15
+    }); //end var map 
+
+    map.on('load', function () {
+        // Add places data to the map (does not yet make them display)
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': places
+        }); //end map.addSource
+
+
+        map.loadImage('w3.png', function(error, image) {if(error) throw error;  map.addImage('pin', image);} );
+        map.loadImage('mapbox-icon.png', function(error, image) {if(error) throw error;  map.addImage('mbpin', image);} );
+
+        icon_dict = {'alpha':'theater', 'beta':'bar', 'delta':'toilet', 'gone':'rocket'}
+
+
+        places.features.forEach(function (feature) {
+            var symbol = feature.properties['condition'];
+            console.log("symbol", symbol, "Type: " , typeof(symbol));
+
+            console.log("layerID", layerID, "Type: " , typeof(layerID));
+            console.log("CHECK: ", map.getLayer(layerID))
+            var txtlab = feature.properties['condition'];
+            if (txtlab == "alpha") {img = "rocket";}
+            else if (txtlab == "beta") {img = "bicycle";}
+            else if (txtlab == "delta") {img = "bar";}
+            else {img='music';}
+
+            var ic = feature.properties['icon'];
+            var layerID = 'poi-' + symbol;
+
+            // Add a layer for this symbol type if it hasn't been added already.
+            if (!map.getLayer(layerID)) {
+                map.addLayer({
+                    'id': layerID,
+                    'type': 'symbol',
+                    'source': 'places',
+                    'layout': {
+                        // 'icon-image':  'rocket' + '-15',
+                        'icon-image': img + "-15",
+                        'icon-size': 2.5,
+                        'icon-allow-overlap': true,
+                        'text-field': symbol,
+                        'icon-allow-overlap': true,
+                        'text-allow-overlap': true,
+                        'text-letter-spacing': 0.05,
+                        'text-offset': [0, 1]
+                    },
+
+                    //  a filter expression that singles out all features where "icon" 
+                    //is equal to symbol (a variable that is set to the selected feature's icon property):
+                    // https://docs.mapbox.com/help/glossary/filter/
+                    // this is what makes the icon the symbol. Otherwise all symbols go on top of each other.
+
+                    // https://stackoverflow.com/questions/53672066/data-driven-styling-using-multiple-filters-in-mapbox-gl-js
+                    // https://docs.mapbox.com/mapbox-gl-js/style-spec/other/#other-filter
+
+                    // 'filter': ['==', 'icon', ic],
+                    // 'filter': ['==', 'condition', txtlab]
+                    "filter": ["any",
+                              ["==", "icon", txtlab],
+                              ["==", "condition", txtlab]
+                            ]
+                });
+
+                ////// TRY THE CLICK THING    
+                    // When a click event occurs on a feature in the places layer, open a popup at the
+                    // location of the feature, with description HTML from its properties.
+                    map.on('click', layerID, function (e) {
+                    var coordinates = e.features[0].geometry.coordinates.slice();
+                    var description = e.features[0].properties.description + e.features[0].properties.image   ;
+                    
+                    // Ensure that if the map is zoomed out such that multiple
+                    // copies of the feature are visible, the popup appears
+                    // over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+                    
+                    new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(description)
+                    .addTo(map);
+                    });
+
+
+                    // Change the cursor to a pointer when the mouse is over the places layer.
+                    map.on('mouseenter', layerID, function () {
+                    map.getCanvas().style.cursor = 'pointer';
+                    });
+                    
+                    // Change it back to a pointer when it leaves.
+                    map.on('mouseleave', layerID, function () {
+                    map.getCanvas().style.cursor = '';
+                    });
+
+                /////////END TRY THE CLICK THING
+
+
+                // Add checkbox and label elements for the layer.
+                var input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = layerID;
+                input.checked = true;
+                filterGroup.appendChild(input);
+
+                var label = document.createElement('label');
+                label.setAttribute('for', layerID);
+                label.textContent = symbol;
+                filterGroup.appendChild(label);
+
+                // When the checkbox changes, update the visibility of the layer.
+                input.addEventListener('change', function (e) {
+                    map.setLayoutProperty(
+                        layerID,
+                        'visibility',
+                        e.target.checked ? 'visible' : 'none'
+                    );
+                });
+            } // end if !map.getlayer
+
+        }); // end places features foreach
+
+
+    }); // end map onload
+
+
+</script>
+
+</body>
+</html>
