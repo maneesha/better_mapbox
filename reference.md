@@ -11,6 +11,8 @@ https://stackoverflow.com/questions/51481471/adding-custom-icons-for-each-featur
 
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
+&#9733; indicates things that are done.
+
 * Set up my own mapbox accessToken
 
 * Move data to its own file
