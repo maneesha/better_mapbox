@@ -17,12 +17,12 @@ https://stackoverflow.com/questions/45536403/mapbox-gl-js-and-geojson-as-an-exte
 
 * Set up my own mapbox accessToken
 
-* Move data to its own file
+* Move data to its own file  &#9733; 
 
 * Add fields to geojson:
   * condition
   * description
-  * image
+  * image *NOTE: image is not necessary with if statement dependent on condition*
 
 * Inside `places.features.forEach`:
   * Add new vars:
