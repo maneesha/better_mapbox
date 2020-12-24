@@ -80,6 +80,10 @@ Set circle color as absolute color or dependent on a property in the data set.
 Chrome gives you an error if you try to load images over just http.
 Error is ERR_CERT_AUTHORITY_INVALID.  Images served over https work fine.
 
+## Mapbox access tokens
+
+My access token can be found at <https://account.mapbox.com/access-tokens/>.  If I go to an example code page like this <https://docs.mapbox.com/mapbox-gl-js/example/data-driven-circle-colors/>, the sample code pre-populates with my access token.  If I go to the same page without being logged in, it just says `mapboxgl.accessToken = '<your access token here>';`
+
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
 &#9733; indicates things that are done.
