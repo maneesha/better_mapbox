@@ -8,6 +8,7 @@
 <title>Filter symbols by toggling a list</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- <Link to local external js file with geojson data -->
 <script src = "data/places.js"></script>
@@ -21,11 +22,26 @@
 </head>
 <body>
 <style>
+
+#toggle { font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        border-radius: 3px;
+        width: 120px;
+        color: #fff;
+        background-color: #3386c0;
+
+    }
+
+
     .filter-group {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-weight: 600;
         position: absolute;
-        top: 10px;
+        top: 60px;
         right: 10px;
         z-index: 1;
         border-radius: 3px;
@@ -69,8 +85,21 @@
         margin-right: 5px;
     }
 </style>
+
+<script>
+    $(document).ready(function(){
+      $("#toggle").click(function(){
+        $("#filter-group").toggle();
+      });
+
+    });
+</script>
+
+<button id="toggle">Filter</button>
 <div id="map"></div>
-<nav id="filter-group" class="filter-group"></nav>
+
+<nav id="filter-group" class="filter-group">
+</nav>
 
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoibWFuZWVzaGE0IiwiYSI6IlJqVjNqdkUifQ.Nle8jqtpYS_1pDQLPz1E0g';
@@ -175,6 +204,10 @@
             }
         });
     });
+
+
+
+
 </script>
 
 </body>
