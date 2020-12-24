@@ -23,7 +23,7 @@
 <body>
 <style>
 
-#toggle { font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    #toggle { font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-weight: 600;
         position: absolute;
         top: 10px;
@@ -35,7 +35,6 @@
         background-color: #3386c0;
 
     }
-
 
     .filter-group {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -104,7 +103,6 @@
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoibWFuZWVzaGE0IiwiYSI6IlJqVjNqdkUifQ.Nle8jqtpYS_1pDQLPz1E0g';
  
-
     var filterGroup = document.getElementById('filter-group');
     var map = new mapboxgl.Map({
         container: 'map',
@@ -113,23 +111,21 @@
         zoom: 11.15
     });
 
-        // Add geolocate control to the map.
-        map.addControl(
-        new mapboxgl.GeolocateControl({
-        positionOptions: {
-        enableHighAccuracy: true
-        },
-        trackUserLocation: false
+    // Add geolocate control to the map.
+    map.addControl(
+    new mapboxgl.GeolocateControl({
+    positionOptions: {
+    enableHighAccuracy: true
+    },
+    trackUserLocation: false
+    }), 'top-left'
+    );
+
+    // Add zoom controls to the map.
+    map.addControl(
+        new mapboxgl.NavigationControl({
         }), 'top-left'
-        );
-
-        // Add zoom controls to the map.
-        map.addControl(
-            new mapboxgl.NavigationControl({
-
-            }), 'top-left'
-        );
-
+    );
 
     map.on('load', function () {
         // Add a GeoJSON source containing place coordinates and information.
