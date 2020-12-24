@@ -42,13 +42,32 @@ this is what makes the icon the symbol. Otherwise all symbols go on top of each 
 
 * Inside `places.features.forEach`:
   * Add new vars:
-    * `var symbol = feature.properties['condition'];`
+    * `var symbol = feature.properties['condition'];` **Necessary??**
     * `var txtlab = feature.properties['condition'];`  &#9733;
-    * `var ic = feature.properties['icon'];`
+    * `var ic = feature.properties['icon'];`  **Necessary??**
     * `var layerID = 'poi-' + symbol;`
 
-* To start with, make all symbols be rockets
+* To start with, make all symbols be rockets.  **Didn't actually do this; just want straight to the icon from the conditional if statement.**
   * inside `layout`:
     * `'icon-image': 'rocket' + '-15'
+  
 
 * Make the text labels be the condition
+
+
+1. change `var symbol = feature.properties['icon'];` to `var symbol = feature.properties['condition'];`
+1. set a variable to store the image
+
+```javascript
+// Set var to store what the image will be
+var img = "";
+if (txtlab == "good") {img = "rocket";}
+else if (txtlab == "fair") {img = "bicycle";}
+else if (txtlab == "poor") {img = "bar";}
+else {img='music';}
+```
+
+1. make icon image be `img` + 15 rather than symbol + 15
+1. make filter use condition and txtlab
+1. make the checkbox labels be txtlab, not symbol
+
