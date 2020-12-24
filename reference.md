@@ -39,7 +39,39 @@ this is what makes the icon the symbol. Otherwise all symbols go on top of each 
 <https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_toggle>
 <https://www.w3schools.com/jquery/jquery_hide_show.asp>
 
+## Set plain circles as map markers
 
+Read more: <https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3>
+
+### Inside  `map.addLayer({})`
+
+* `'type': 'symbol'` will use a png or symbol from maki library
+* `type': 'circle'` will create a circle, with defined radius and color.
+See more info at addLayer type: <https://docs.mapbox.com/mapbox-gl-js/api/map/#map#addlayer>
+
+### Set circle radius
+
+Set the circle radius in pixels as an aboslute number or dependent on zoom. Each pair in stops is [zoom_level, px_size] `{'base':15, 'stops':[ [0, 5], [7, 10] [10, 15]]},`
+
+Info on zoom levels: <https://docs.mapbox.com/help/glossary/zoom-level/>
+
+### Set circle colorS
+
+Set circle color as absolute color or dependent on a property in the data set.
+
+```javascript
+'circle-color':[
+    "match",
+    ["get", "condition"],
+    "good",
+    "#11A732",
+    "fair",
+    "#ECF027",
+    "poor",
+    "#FF5733",
+    '#ccc'
+]
+```
 
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
