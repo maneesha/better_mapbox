@@ -32,6 +32,9 @@ this is what makes the icon the symbol. Otherwise all symbols go on top of each 
 ### Get user location
 <https://docs.mapbox.com/mapbox-gl-js/example/locate-user/>
 
+### Add map zoom controls
+<https://docs.mapbox.com/mapbox-gl-js/api/markers/#navigationcontrol>
+
 
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
