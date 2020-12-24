@@ -94,6 +94,13 @@
         }), 'top-left'
         );
 
+        // Add zoom controls to the map.
+        map.addControl(
+            new mapboxgl.NavigationControl({
+
+            }), 'top-left'
+        );
+
 
     map.on('load', function () {
         // Add a GeoJSON source containing place coordinates and information.
