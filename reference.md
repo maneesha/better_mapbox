@@ -35,6 +35,11 @@ this is what makes the icon the symbol. Otherwise all symbols go on top of each 
 ### Add map zoom controls
 <https://docs.mapbox.com/mapbox-gl-js/api/markers/#navigationcontrol>
 
+## Toggle visibility of filter menu
+<https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_toggle>
+<https://www.w3schools.com/jquery/jquery_hide_show.asp>
+
+
 
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
