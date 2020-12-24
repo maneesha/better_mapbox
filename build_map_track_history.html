@@ -130,7 +130,9 @@
     map.addControl(
         new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
+        mapboxgl: mapboxgl, 
+        collapsed: true,
+        placeholder: "Enter location"
         }), 'top-left'
         );
 
