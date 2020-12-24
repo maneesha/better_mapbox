@@ -1,4 +1,4 @@
-{
+var toynbee_tiles = {
    "type": "FeatureCollection",
    "features": [
   {
