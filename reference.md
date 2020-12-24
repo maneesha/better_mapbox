@@ -25,7 +25,13 @@ A filter expression that singles out all features where "icon" is equal to symbo
 this is what makes the icon the symbol. Otherwise all symbols go on top of each other.
 
 <https://stackoverflow.com/questions/53672066/data-driven-styling-using-multiple-filters-in-mapbox-gl-js>
+
 <https://docs.mapbox.com/mapbox-gl-js/style-spec/other/#other-filter>
+
+
+### Get user location
+<https://docs.mapbox.com/mapbox-gl-js/example/locate-user/>
+
 
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
