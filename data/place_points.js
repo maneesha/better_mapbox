@@ -6,6 +6,7 @@ myPoints = {
             "properties": {
                 "icon": "theatre",
                 "condition": "good",
+                "description": "<h1>About</h1>This is a place to go",
             },
             "geometry": {
                 "type": "Point",
@@ -17,6 +18,7 @@ myPoints = {
             "properties": {
                 "icon": "theatre",
                 "condition": "good",
+                "description": "<h1>About</h1>This is a place to go",
             },
             "geometry": {
                 "type": "Point",
@@ -28,6 +30,7 @@ myPoints = {
             "properties": {
                 "icon": "bar",
                 "condition": "fair",
+                "description": "<h1>About</h1>This is a place to go",
             },
             "geometry": {
                 "type": "Point",
@@ -39,6 +42,7 @@ myPoints = {
             "properties": {
                 "icon": "bar",
                 "condition": "fair",
+                "description": "<h1>About</h1>This is a place to go",
             },
             "geometry": {
                 "type": "Point",
@@ -50,6 +54,7 @@ myPoints = {
             "properties": {
                 "icon": "music",
                 "condition": "poor",
+                "description": "<h1>About</h1>This is a place to go",
             },
             "geometry": {
                 "type": "Point",
@@ -61,6 +66,7 @@ myPoints = {
             "properties": {
                 "icon": "music",
                 "condition": "poor",
+                "description": "<h1>About</h1>This is a place to go",
             },
             "geometry": {
                 "type": "Point",
@@ -72,6 +78,7 @@ myPoints = {
             "properties": {
                 "icon": "music",
                 "condition": "poor",
+                "description": "<h1>About</h1>This is a place to go",
             },
             "geometry": {
                 "type": "Point",
