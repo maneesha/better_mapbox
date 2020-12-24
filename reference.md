@@ -28,14 +28,16 @@ this is what makes the icon the symbol. Otherwise all symbols go on top of each 
 
 <https://docs.mapbox.com/mapbox-gl-js/style-spec/other/#other-filter>
 
-
 ### Get user location
+
 <https://docs.mapbox.com/mapbox-gl-js/example/locate-user/>
 
 ### Add map zoom controls
+
 <https://docs.mapbox.com/mapbox-gl-js/api/markers/#navigationcontrol>
 
 ## Toggle visibility of filter menu
+
 <https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_toggle>
 <https://www.w3schools.com/jquery/jquery_hide_show.asp>
 
@@ -101,10 +103,8 @@ Error is ERR_CERT_AUTHORITY_INVALID.  Images served over https work fine.
 * To start with, make all symbols be rockets.  **Didn't actually do this; just want straight to the icon from the conditional if statement.**
   * inside `layout`:
     * `'icon-image': 'rocket' + '-15'
-  
 
 * Make the text labels be the condition
-
 
 1. change `var symbol = feature.properties['icon'];` to `var symbol = feature.properties['condition'];`
 1. set a variable to store the image
@@ -121,4 +121,3 @@ else {img='music';}
 1. make icon image be `img` + 15 rather than symbol + 15
 1. make filter use condition and txtlab
 1. make the checkbox labels be txtlab, not symbol
-
