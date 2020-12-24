@@ -99,6 +99,15 @@
         content: '✔';
         margin-right: 5px;
     }
+
+    img {
+        padding: 0;
+        display: block;
+        margin: 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
 </style>
 
 <script>
@@ -201,8 +210,10 @@
             // location of the feature, with description HTML from its properties.
             map.on('click', layerID, function (e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
-            var description = e.features[0].properties.description;
-            
+            var img_url = e.features[0].properties.image_link;
+            if (img_url) {var popup_content = "<img src='" + img_url + "'>"; }
+            else {var popup_content = "IMAGE NOT AVAILABLE"}
+
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
             // over the copy being pointed to.
@@ -212,7 +223,7 @@
             
             new mapboxgl.Popup()
             .setLngLat(coordinates)
-            .setHTML(description)
+            .setHTML(popup_content)
             .addTo(map);
             });
 
