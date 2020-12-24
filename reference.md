@@ -73,6 +73,11 @@ Set circle color as absolute color or dependent on a property in the data set.
 ]
 ```
 
+## Images must load over https
+
+Chrome gives you an error if you try to load images over just http.
+Error is ERR_CERT_AUTHORITY_INVALID.  Images served over https work fine.
+
 ## THINGS TO DO TO GET WORKING SELECTORS AND CLICK EFFECTS
 
 &#9733; indicates things that are done.
