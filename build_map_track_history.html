@@ -13,6 +13,7 @@
 <!-- <Link to local external js file with geojson data -->
 <script src = "data/places.js"></script>
 <script src = "data/place_points.js"></script>
+<script src = "data/toynbee.js"></script>
 
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
 <style>
@@ -158,12 +159,12 @@
         // map.addLayer below.  
         map.addSource('myData', {
             'type': 'geojson',
-            'data': myPoints // variable name from the data file
+            'data': toynbee_tiles // variable name from the data file
         });
 
         // iterate forEach through same dataset defined above
-        myPoints.features.forEach(function (feature) {
-            var symbol = feature.properties['icon'];
+        toynbee_tiles.features.forEach(function (feature) {
+            var symbol = feature.properties['condition'];
 
             // Set variable to use the condition as the text label
             var txtlab = feature.properties['condition'];
@@ -181,12 +182,15 @@
                                  "match",
                                  ["get", "condition"],
                                  "good",
-                                 "#11A732",
+                                 "#11A732", // green
                                  "fair",
-                                 "#ECF027",
+                                 "#ECF027", // yellow
                                  "poor",
-                                 "#FF5733",
-                                 '#ccc'
+                                 "#FF5733", // red 
+                                 "gone",
+                                 "#ccc", // gray
+                                 "#D619E3" // purple for undefined
+                                 
                              ]
                             },
                     'filter': ['==', 'condition', txtlab]
