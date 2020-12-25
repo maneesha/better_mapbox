@@ -1169,12 +1169,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic:",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%2012th.%20&%20Chestnut%20(1997).jpg",
+    "image_link":"http://steveweinik.com/TILES/small/Philly%2012th.%20&%20Chestnut%20(1997).jpg",
+    "year_glued":"late 1990's",
     "Image_date":"",
-    "Tile_text":"late 1990's",
-    "Photo_Credit":"MAIN: Toynbee idea in movie 2001 Raise dead planet Jupiter  SIDE: Mou must make & glue tiles! You! As media...",
-    "credit_link":"Bill O'Neill"
+    "Tile_text":"MAIN: Toynbee idea in movie 2001 Raise dead planet Jupiter  SIDE: Mou must make & glue tiles! You! As media...",
+    "Photo_Credit":"Bill O'Neill",
+    "credit_link":""
     }
   },
   {
