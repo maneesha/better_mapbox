@@ -109,6 +109,7 @@ My access token can be found at <https://account.mapbox.com/access-tokens/>.  If
     * `'icon-image': 'rocket' + '-15'
 
 * Make the text labels be the condition
+**Not necessary since I made the circle markers with conditional colors**
 
 1. change `var symbol = feature.properties['icon'];` to `var symbol = feature.properties['condition'];`
 1. set a variable to store the image
@@ -125,3 +126,7 @@ else {img='music';}
 1. make icon image be `img` + 15 rather than symbol + 15
 1. make filter use condition and txtlab
 1. make the checkbox labels be txtlab, not symbol
+
+* match up brackets for easier reading 
+* rename file
+* figure out how to sort the filter options
