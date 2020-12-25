@@ -210,7 +210,8 @@
             map.on('click', layerID, function (e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
             var img_url = e.features[0].properties.image_link;
-            if (img_url) {var popup_content = "<img src='" + img_url + "'>"; }
+            if (img_url)
+                {var popup_content = "<a target='_blank' href='" +  img_url  +  "'><img src='" + img_url + "'></a>"; }
             else {var popup_content = "IMAGE NOT AVAILABLE"}
 
             var condition_text = e.features[0].properties.condition;
