@@ -17,12 +17,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" possibly first highway tile",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/Jersey/NJ_Turnpike_BlackHorse.jpg",
+    "image_link":"http://steveweinik.com/TILES/Jersey/NJ_Turnpike_BlackHorse.jpg",
+    "year_glued":"2004",
     "Image_date":"",
-    "Tile_text":"2004",
-    "Photo_Credit":"",
-    "credit_link":"Howard Ferguson for Weird NJ magazine"
+    "Tile_text":"",
+    "Photo_Credit":"Howard Ferguson for Weird NJ magazine",
+    "credit_link":""
     }
   },
   {
@@ -1001,12 +1001,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" address doesn't make sense",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/New%20York/NYC%20West%20Broadway%20and%206th%20Avenue%20(citynoise.org).jpg",
+    "image_link":"http://steveweinik.com/TILES/New%20York/NYC%20West%20Broadway%20and%206th%20Avenue%20(citynoise.org).jpg",
+    "year_glued":"",
     "Image_date":"",
     "Tile_text":"",
-    "Photo_Credit":"",
-    "credit_link":"citynoise.org"
+    "Photo_Credit":"citynoise.org",
+    "credit_link":""
     }
   },
   {
@@ -1193,7 +1193,7 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic: Justin Duerr missed the placement of this tile by minutes. It may also be the last original style Toynbee tile ever glued.",
     "condition":"other",
-    "image_link":"0",
+    "image_link":"",
     "year_glued":"",
     "Image_date":"",
     "Tile_text":"2002",
@@ -1241,12 +1241,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%2015th.%20&%20Chestnut%20(1997).jpg",
-    "Image_date":"",
-    "Tile_text":"1997",
-    "Photo_Credit":"unknown side text",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/small/Philly%2015th.%20&%20Chestnut%20(1997).jpg",
+    "year_glued":"",
+    "Image_date":"1997",
+    "Tile_text":"",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1265,12 +1265,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/Philadelphia/PHL_15_chestnut_Duerr_1997_2.gif",
+    "image_link":"http://steveweinik.com/TILES/Philadelphia/PHL_15_chestnut_Duerr_1997_2.gif",
+    "year_glued":"1997",
     "Image_date":"",
-    "Tile_text":"1997",
-    "Photo_Credit":"",
-    "credit_link":"Justin Duerr"
+    "Tile_text":"",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1337,12 +1337,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic: + the Manifesto or 10-Commandments tile",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%20-%2016th.%20&%20Chestnut%20(1997).jpg",
-    "Image_date":"",
-    "Tile_text":"photo: late 1990's",
-    "Photo_Credit":"JOHN KNIGHT, OWNER OF \"THE PHILADELPHIA INQUIRER\" - HELLION JEW - WHOSE HATED THIS MOVEMENTS GUTS - FOR YEARS - TAKES MONEY FROM THE MAFIA TO MAKE THE MAFIA LOOK GOOD IN HIS NEWSPAPERS SO HE HAS THE MAFIA IN HIS BACK POCKET.\nJOHN KNIGHT SENT THE MAFIA TO MURDER ME IN MAY 1991. (unreadable.....) JOURNALIST ALL OF THEM GLOATED TO MY FACE ABOUT MY DEATH AND KNIGHT-RIDDERS GREAT POWER TO DESTROY. IN FACT JOHN KNIGHT WENT INTO HELLION BINGE OF JOY OVER KNIGHT-RIDDERS GREAT POWER TO DESTROY. I SECURED HOUSE WITH BLAST DOORS AND FLED THE COUNTRY IN JUNE 1991. N.B.C. ATTORNEYS, JOURNALISTS AND SECURITY OFFICIALS AT ROCKERFELLER CENTER FRADULAENTLY .....(unreadable)..... UNDER THE \"FREEDOM OF INFORMATION ACT\" ALL.... ORDERS OF N.B.C. EXECUTIVES GOT THE U.S. FEDERAL DISTRICT ATTORNEYS OFFICE AND GOT THE F.B.I. TO GET INTERPOL TO ESTABLISH TASK FORCE THAT LOCATED ME IN DOVER ENGLAND.\nWHEN BACK HOME INQUIRER GOT UNION GOONS FROM THEIR OWN EMPLOYEES UNION TO SEND DOWN A \"SPORTS JOURNALIST\" -WHO - WITH BASEBALL BAT BASHED IN LIGHTS AND WINDOWS OF NEIGHBORHOOD CARS - AS WELL AS MEN OUTSIDE MY HOUSE. THEY ARE STATIONED THERE STILL. WAITING FOR ME. N.B.C., C.B.S., GROUP \"W\" WESTINGHOUSE. TIME. TIME-WARNER. FOX. UNIVERSAL - ALL OF THE \"CULT OF THE HELLION\" EACH WERE MUCH WORSE THAN KNIGHT RIDDER EVER WAS. (MOSTLY HELLION JEWS). WHEN K.Y.W. AND N.B.C. EXECUTIVES TOLD JOHN KNIGHT THE WHOLE COVEN GLOATED ON HOW THEIR SOVIET PALS HAD FOUND A WAY TO TURN IT INTO A.....",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/small/Philly%20-%2016th.%20&%20Chestnut%20(1997).jpg",
+    "year_glued":"",
+    "Image_date":"photo: late 1990's",
+    "Tile_text":"JOHN KNIGHT, OWNER OF \"THE PHILADELPHIA INQUIRER\" - HELLION JEW - WHOSE HATED THIS MOVEMENTS GUTS - FOR YEARS - TAKES MONEY FROM THE MAFIA TO MAKE THE MAFIA LOOK GOOD IN HIS NEWSPAPERS SO HE HAS THE MAFIA IN HIS BACK POCKET.\nJOHN KNIGHT SENT THE MAFIA TO MURDER ME IN MAY 1991. (unreadable.....) JOURNALIST ALL OF THEM GLOATED TO MY FACE ABOUT MY DEATH AND KNIGHT-RIDDERS GREAT POWER TO DESTROY. IN FACT JOHN KNIGHT WENT INTO HELLION BINGE OF JOY OVER KNIGHT-RIDDERS GREAT POWER TO DESTROY. I SECURED HOUSE WITH BLAST DOORS AND FLED THE COUNTRY IN JUNE 1991. N.B.C. ATTORNEYS, JOURNALISTS AND SECURITY OFFICIALS AT ROCKERFELLER CENTER FRADULAENTLY .....(unreadable)..... UNDER THE \"FREEDOM OF INFORMATION ACT\" ALL.... ORDERS OF N.B.C. EXECUTIVES GOT THE U.S. FEDERAL DISTRICT ATTORNEYS OFFICE AND GOT THE F.B.I. TO GET INTERPOL TO ESTABLISH TASK FORCE THAT LOCATED ME IN DOVER ENGLAND.\nWHEN BACK HOME INQUIRER GOT UNION GOONS FROM THEIR OWN EMPLOYEES UNION TO SEND DOWN A \"SPORTS JOURNALIST\" -WHO - WITH BASEBALL BAT BASHED IN LIGHTS AND WINDOWS OF NEIGHBORHOOD CARS - AS WELL AS MEN OUTSIDE MY HOUSE. THEY ARE STATIONED THERE STILL. WAITING FOR ME. N.B.C., C.B.S., GROUP \"W\" WESTINGHOUSE. TIME. TIME-WARNER. FOX. UNIVERSAL - ALL OF THE \"CULT OF THE HELLION\" EACH WERE MUCH WORSE THAN KNIGHT RIDDER EVER WAS. (MOSTLY HELLION JEWS). WHEN K.Y.W. AND N.B.C. EXECUTIVES TOLD JOHN KNIGHT THE WHOLE COVEN GLOATED ON HOW THEIR SOVIET PALS HAD FOUND A WAY TO TURN IT INTO A....",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1361,12 +1361,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/Philadelphia/PHL_16_Chestnut_ONeill2.jpg",
-    "Image_date":"",
-    "Tile_text":"photo: late 1990's",
-    "Photo_Credit":"",
-    "credit_link":"Bill O'Neill"
+    "image_link":"http://steveweinik.com/TILES/Philadelphia/PHL_16_Chestnut_ONeill2.jpg",
+    "year_glued":"",
+    "Image_date":"photo: late 1990's",
+    "Tile_text":"",
+    "Photo_Credit":"Bill O'Neill",
+    "credit_link":""
     }
   },
   {
@@ -1385,8 +1385,8 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/Philadelphia/PHL_16_Market_ONeill.jpg",
+    "image_link":"http://steveweinik.com/TILES/Philadelphia/PHL_16_Market_ONeill.jpg",
+    "year_glued":"",
     "Image_date":"",
     "Tile_text":"photo: late 1990's",
     "Photo_Credit":"unknown side text",
@@ -1433,7 +1433,7 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" early single color tile design.",
     "condition":"other",
-    "image_link":"0",
+    "image_link":"",
     "year_glued":"",
     "Image_date":"",
     "Tile_text":"",
@@ -1481,12 +1481,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%204th.%20&%20Chestnut%20(1997).jpg",
-    "Image_date":"",
-    "Tile_text":"1997",
-    "Photo_Credit":"Toynbee Idea in movie 2001 Resurrect Dead on Planet Jupiter",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/small/Philly%204th.%20&%20Chestnut%20(1997).jpg",
+    "year_glued":"",
+    "Image_date":"1997",
+    "Tile_text":"Toynbee Idea in movie 2001 Resurrect Dead on Planet Jupiter",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1505,12 +1505,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" multi-color mosaic",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/Philadelphia/PHL_5_chestnut_Duerr_1997.gif",
-    "Image_date":"",
-    "Tile_text":"1997",
-    "Photo_Credit":"Toynbee Idea in movie 2001 Resurrect Dead on Planet Jupiter",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/Philadelphia/PHL_5_chestnut_Duerr_1997.gif",
+    "year_glued":"",
+    "Image_date":"1997",
+    "Tile_text":"Toynbee Idea in movie 2001 Resurrect Dead on Planet Jupiter",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1529,12 +1529,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" experimental tile in South Philly",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%20(1998)%206th.%20or%207th.%20&%20Shunk.jpg",
-    "Image_date":"",
-    "Tile_text":"1999",
-    "Photo_Credit":"(random letters/symbols)",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/small/Philly%20(1998)%206th.%20or%207th.%20&%20Shunk.jpg",
+    "year_glued":"",
+    "Image_date":"1999",
+    "Tile_text":"(random letters/symbols)",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1553,12 +1553,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" early single color tile design.",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%20-%208th.%20&%20Chestnut%20(1997).jpg",
+    "image_link":"http://steveweinik.com/TILES/small/Philly%20-%208th.%20&%20Chestnut%20(1997).jpg",
+    "year_glued":"",
     "Image_date":"",
     "Tile_text":"",
-    "Photo_Credit":"",
-    "credit_link":"Justin Duerr"
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1577,12 +1577,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" experimental tile in South Philly",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%208th.%20&%20Shunk%20(1998)%20(02).jpg",
-    "Image_date":"",
-    "Tile_text":"1999",
-    "Photo_Credit":"",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/small/Philly%208th.%20&%20Shunk%20(1998)%20(02).jpg",
+    "year_glued":"",
+    "Image_date":"1999",
+    "Tile_text":"",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1601,12 +1601,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" experimental tile in South Philly",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%208th.%20&%20Shunk%20(1998)%20(05).jpg",
-    "Image_date":"",
-    "Tile_text":"1999",
-    "Photo_Credit":"",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/small/Philly%208th.%20&%20Shunk%20(1998)%20(05).jpg",
+    "year_glued":"",
+    "Image_date":"1999",
+    "Tile_text":"",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1625,12 +1625,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" experimental tile in South Philly",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%208th.%20&%20Shunk%20(1998).jpg",
-    "Image_date":"",
-    "Tile_text":"1999",
-    "Photo_Credit":"",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/small/Philly%208th.%20&%20Shunk%20(1998).jpg",
+    "year_glued":"",
+    "Image_date":"1999",
+    "Tile_text":"",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1649,12 +1649,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" early single color tile design.",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/Philadelphia/PHL_unk2.jpg",
-    "Image_date":"",
-    "Tile_text":"photo: late 1990's",
-    "Photo_Credit":"",
-    "credit_link":"Bill O'Neill"
+    "image_link":"http://steveweinik.com/TILES/Philadelphia/PHL_unk2.jpg",
+    "year_glued":"",
+    "Image_date":"photo: late 1990's",
+    "Tile_text":"",
+    "Photo_Credit":"Bill O'Neill",
+    "credit_link":""
     }
   },
   {
@@ -1673,12 +1673,12 @@ var toynbee_tiles = {
     "Comments":"paved over",
     "tile_type":" SPANISH experimental tile in South Philly",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/Philly%20-%209th.%20&%20Shunk%20(1998)%20(02).jpg",
-    "Image_date":"",
-    "Tile_text":"1999",
-    "Photo_Credit":"",
-    "credit_link":"Justin Duerr"
+    "image_link":"http://steveweinik.com/TILES/small/Philly%20-%209th.%20&%20Shunk%20(1998)%20(02).jpg",
+    "year_glued":"",
+    "Image_date":"1999",
+    "Tile_text":"",
+    "Photo_Credit":"Justin Duerr",
+    "credit_link":""
     }
   },
   {
@@ -1817,12 +1817,12 @@ var toynbee_tiles = {
     "Comments":"2008: still there",
     "tile_type":" experimental tile in South Philly",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/small/PHL_Mildred_Oregon_Weinik_2006-1485412646-O.jpg",
-    "Image_date":"",
-    "Tile_text":"2006",
-    "Photo_Credit":"",
-    "credit_link":"Steve Weinik"
+    "image_link":"http://steveweinik.com/TILES/small/PHL_Mildred_Oregon_Weinik_2006-1485412646-O.jpg",
+    "year_glued":"",
+    "Image_date":"2006",
+    "Tile_text":"",
+    "Photo_Credit":"Steve Weinik",
+    "credit_link":""
     }
   },
   {
@@ -3954,12 +3954,12 @@ var toynbee_tiles = {
     "Comments":"2008: still there",
     "tile_type":" experimental tile in South Philly",
     "condition":"other",
-    "image_link":"0",
-    "year_glued":"http://steveweinik.com/TILES/Philadelphia/PHL_7_Shunk_Weinik_2005.jpg",
-    "Image_date":"",
-    "Tile_text":"2005",
-    "Photo_Credit":"Random shapes/colors.  no text.",
-    "credit_link":"Steve Weinik"
+    "image_link":"http://steveweinik.com/TILES/Philadelphia/PHL_7_Shunk_Weinik_2005.jpg",
+    "year_glued":"",
+    "Image_date":"2005",
+    "Tile_text":"Random shapes/colors.  no text",
+    "Photo_Credit":"Steve Weinik",
+    "credit_link":""
     }
   },
   {
